@@ -1,42 +1,51 @@
 // src/App.jsx
-import { useEffect } from 'react'; // 1. Importe o useEffect
-import { Outlet } from 'react-router-dom';
+import { useEffect, useRef } from 'react'; // 1. Importe useRef
+import { Outlet, useLocation } from 'react-router-dom'; // 2. Importe useLocation
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Lenis from '@studio-freight/lenis'; // 2. Importe a Lenis
+import Lenis from '@studio-freight/lenis';
 
 function App() {
+  const lenisRef = useRef(null); // Cria nossa "caixinha" para guardar a Lenis
+  const { pathname } = useLocation(); // Pega a URL atual
 
-  // 3. Adicione o useEffect para controlar a Lenis
-  useEffect(() => {
-    // Inicializa a Lenis com algumas opções de suavidade
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
+  // Efeito para inicializar e controlar a Lenis
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //   });
 
-    // Função que atualiza a animação a cada frame
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   lenisRef.current = lenis; // Guarda a instância da Lenis na nossa "caixinha"
 
-    requestAnimationFrame(raf);
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
 
-    // Função de limpeza: será executada quando o componente for "desmontado"
-    return () => {
-      lenis.destroy();
-    };
-  }, []); // O array vazio [] garante que este efeito rode apenas uma vez
+  //   // Função de limpeza
+  //   return () => {
+  //     lenis.destroy();
+  //     lenisRef.current = null;
+  //   };
+  // }, []);
+
+  // // 3. NOVO EFEITO: Rola para o topo quando a URL muda
+  // useEffect(() => {
+  //   // Usamos ?. para garantir que o código não quebre se lenisRef.current for nulo
+  //   lenisRef.current?.scrollTo(0, { immediate: true });
+  // }, [pathname]); // Roda toda vez que o pathname (URL) muda
 
   return (
     <>
+      {/* 4. Podemos remover o <ScrollToTop /> daqui */}
       <Header />
       <main>
-        <Outlet /> 
+        <Outlet />
       </main>
       <Footer />
     </>
-  )
+  );
 }
 export default App;

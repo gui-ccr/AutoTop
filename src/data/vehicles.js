@@ -1,17 +1,20 @@
-// src/data/vehicles.js - Dados Atualizados com Imagens Corretas
-import FordKa from '../assets/ford-ka.jpeg'
-import Onix from '../assets/Onix.jpg'
-import HB20 from '../assets/HB20.jpeg'
-import HyundaiHB20 from '../assets/Hyundai HB20.webp'
-import VolkswagenGol from '../assets/Volkswagen Gol 1.0 MPI.jpeg'
-import FiatArgo from '../assets/Fiat Argo 1.3 Drive.jpg'
-import HondaCivic from '../assets/Honda Civic 2.0 EX.webp'
-import ToyotaCorolla from '../assets/Toyota Corolla 1.8 GLI.webp'
-import NissanKicks from '../assets/Nissan Kicks 1.6 SV.jpeg'
-import JeepRenegade from '../assets/Jeep Renegade 1.8 Sport.jpeg'
-import FordEcoSport from '../assets/Ford EcoSport 1.5 Titanium.jpg'
-import ChevroletTracker from '../assets/Chevrolet Tracker 1.4 Premier.jpeg'
-import VolkswagenPolo from '../assets/Volkswagen Polo 1.6 MSI.jpg'
+// src/data/vehicles.js - VERSÃO FINAL CORRIGIDA
+import FordKa from '../assets/ford-ka.jpeg';
+import FordKa_Interior from '../assets/Ford ka interior.jpg';
+import Onix from '../assets/Onix.jpg';
+import Onix_interior from '../assets/onix-interior.webp';
+import Onix_traseira from '../assets/onix-traseira.webp';
+import HB20 from '../assets/HB20.jpeg';
+import HyundaiHB20 from '../assets/Hyundai HB20.webp';
+import VolkswagenGol from '../assets/Volkswagen Gol 1.0 MPI.jpeg';
+import FiatArgo from '../assets/Fiat Argo 1.3 Drive.jpg';
+import HondaCivic from '../assets/Honda Civic 2.0 EX.webp';
+import ToyotaCorolla from '../assets/Toyota Corolla 1.8 GLI.webp';
+import NissanKicks from '../assets/Nissan Kicks 1.6 SV.jpeg';
+import JeepRenegade from '../assets/Jeep Renegade 1.8 Sport.jpeg';
+import FordEcoSport from '../assets/Ford EcoSport 1.5 Titanium.jpg';
+import ChevroletTracker from '../assets/Chevrolet Tracker 1.4 Premier.jpeg';
+import VolkswagenPolo from '../assets/Volkswagen Polo 1.6 MSI.jpg';
 
 export const vehicles = [
   {
@@ -29,7 +32,7 @@ export const vehicles = [
     category: 'Hatch',
     featured: true,
     condition: 'Seminovo',
-    image: FordKa,
+    images: [FordKa, FordKa_Interior],
   },
   {
     id: 2,
@@ -46,7 +49,7 @@ export const vehicles = [
     category: 'Hatch',
     featured: true,
     condition: 'Seminovo',
-    image: Onix,
+    images: [Onix, Onix_interior, Onix_traseira],
   },
   {
     id: 3,
@@ -63,7 +66,7 @@ export const vehicles = [
     category: 'Hatch',
     featured: true,
     condition: 'Seminovo',
-    image: HyundaiHB20
+    images: [HyundaiHB20], // CORRIGIDO
   },
   {
     id: 4,
@@ -80,7 +83,7 @@ export const vehicles = [
     category: 'Hatch',
     featured: false,
     condition: 'Seminovo',
-    image: VolkswagenGol,
+    images: [VolkswagenGol], // CORRIGIDO
   },
   {
     id: 5,
@@ -97,7 +100,7 @@ export const vehicles = [
     category: 'Hatch',
     featured: false,
     condition: 'Seminovo',
-    image: FiatArgo,
+    images: [FiatArgo], // CORRIGIDO
   },
   {
     id: 6,
@@ -114,7 +117,7 @@ export const vehicles = [
     category: 'Sedan',
     featured: false,
     condition: 'Seminovo',
-    image: HondaCivic,
+    images: [HondaCivic], // CORRIGIDO
   },
   {
     id: 7,
@@ -131,7 +134,7 @@ export const vehicles = [
     category: 'Sedan',
     featured: false,
     condition: 'Seminovo',
-    image: ToyotaCorolla,
+    images: [ToyotaCorolla], // CORRIGIDO
   },
   {
     id: 8,
@@ -148,7 +151,7 @@ export const vehicles = [
     category: 'SUV',
     featured: false,
     condition: 'Seminovo',
-    image: NissanKicks,
+    images: [NissanKicks], // CORRIGIDO
   },
   {
     id: 9,
@@ -165,7 +168,7 @@ export const vehicles = [
     category: 'SUV',
     featured: false,
     condition: 'Seminovo',
-    image: JeepRenegade,
+    images: [JeepRenegade], // CORRIGIDO
   },
   {
     id: 10,
@@ -182,7 +185,7 @@ export const vehicles = [
     category: 'SUV',
     featured: false,
     condition: 'Seminovo',
-    image: FordEcoSport,
+    images: [FordEcoSport], // CORRIGIDO
   },
   {
     id: 11,
@@ -199,7 +202,7 @@ export const vehicles = [
     category: 'SUV',
     featured: false,
     condition: 'Seminovo',
-    image: ChevroletTracker,
+    images: [ChevroletTracker], // CORRIGIDO
   },
   {
     id: 12,
@@ -216,11 +219,11 @@ export const vehicles = [
     category: 'Hatch',
     featured: false,
     condition: 'Seminovo',
-    image: VolkswagenPolo,
+    images: [VolkswagenPolo], // CORRIGIDO
   }
 ];
 
-// Dados para os filtros
+// Dados para os filtros (continua igual)
 export const filterOptions = {
   brands: [...new Set(vehicles.map(v => v.brand))].sort(),
   categories: [...new Set(vehicles.map(v => v.category))].sort(),

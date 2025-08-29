@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage.jsx';
 import VehicleDetailPage from './pages/VehicleDetailPage.jsx'; 
 import StockPage from './pages/StockPage.jsx'; 
 import AboutPage from './pages/AboutPage.jsx'; 
+import ContatcPage from './pages/ContactPage.jsx'; 
 
 
 // import de estilização
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/sobre", 
         element: <AboutPage />,
+      },
+      {
+        path: "/Contato", 
+        element: <ContatcPage />,
       },
       {
         path: "/veiculo/:id", // Rota dinâmica! O :id é uma variável.

@@ -1,4 +1,4 @@
-/* src/index.css - Design Moderno para AutoTop */
+/* src/index.css - Design Moderno para AutoTop - VERSÃO COMPACTA */
 
 /* Importando Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -31,16 +31,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-main {
-  padding-top: 100px; 
-}
+
 html {
   scroll-behavior: smooth;
+  font-size: 14px; /* Reduzido de 16px para 14px - base menor */
 }
 
-
 /* src/index.css */
-
 html.lenis {
   height: auto;
 }
@@ -55,17 +52,16 @@ html.lenis {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5; /* Reduzido de 1.6 para 1.5 */
   color: var(--text-primary);
   background-color: var(--background-light);
-  overflow-x: hidden;
 }
 
 /* Animações de entrada */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px); /* Reduzido de 30px */
   }
   to {
     opacity: 1;
@@ -76,7 +72,7 @@ body {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-30px); /* Reduzido de -50px */
   }
   to {
     opacity: 1;
@@ -87,7 +83,7 @@ body {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(30px); /* Reduzido de 50px */
   }
   to {
     opacity: 1;
@@ -112,15 +108,15 @@ body {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px); /* Reduzido de -10px */
   }
 }
 
-/* Seção Hero */
+/* Seção Hero - COMPACTA */
 .hero-section {
   background: var(--gradient-hero);
   color: white;
-  padding: 120px 0 80px;
+  padding: 100px 0 70px; /* Aumentado de 80px 0 50px */
   position: relative;
   overflow: hidden;
 }
@@ -145,16 +141,16 @@ body {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 2.5rem; /* Reduzido de 3.5rem */
   font-weight: 800;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+  margin-bottom: 1rem; /* Reduzido de 1.5rem */
+  line-height: 1.1; /* Reduzido de 1.2 */
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.1rem; /* Reduzido de 1.5rem */
+  margin-bottom: 1.5rem; /* Reduzido de 2rem */
   opacity: 0.9;
   font-weight: 400;
 }
@@ -162,8 +158,8 @@ body {
 .hero-stats {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  margin-top: 3rem;
+  gap: 3rem; /* Reduzido de 4rem */
+  margin-top: 2rem; /* Reduzido de 3rem */
 }
 
 .stat-item {
@@ -172,35 +168,35 @@ body {
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Reduzido de 2.5rem */
   font-weight: 700;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem; /* Reduzido de 0.5rem */
 }
 
 .stat-label {
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Reduzido de 0.9rem */
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Seção de Veículos */
+/* Seção de Veículos - COMPACTA */
 .vehicles-section {
-  padding: 80px 0;
+  padding: 50px 0; /* Reduzido de 80px 0 */
   background: var(--background-white);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem; /* Reduzido de 4rem */
   animation: fadeInUp 0.8s ease-out;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Reduzido de 2.5rem */
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem; /* Reduzido de 1rem */
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -208,22 +204,22 @@ body {
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzido de 1.2rem */
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* Cards de Veículos Modernos */
+/* Cards de Veículos Modernos - COMPACTOS */
 .vehicle-card {
   background: var(--background-white);
-  border-radius: 20px;
+  border-radius: 15px; /* Reduzido de 20px */
   overflow: hidden;
   box-shadow: var(--shadow-light);
   transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
   border: 1px solid var(--border-color);
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduzido de 2rem */
   animation: fadeInUp 0.6s ease-out;
 }
 
@@ -233,7 +229,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 3px; /* Reduzido de 4px */
   background: var(--gradient-primary);
   transform: scaleX(0);
   transition: transform 0.4s ease;
@@ -244,7 +240,7 @@ body {
 }
 
 .vehicle-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px); /* Reduzido de -8px */
   box-shadow: var(--shadow-large);
   border-color: var(--primary-color);
 }
@@ -256,7 +252,7 @@ body {
 .vehicle-image-container {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  height: 200px; /* Reduzido de 250px */
   background: var(--background-light);
 }
 
@@ -268,69 +264,70 @@ body {
 }
 
 .vehicle-card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05); /* Reduzido de 1.08 */
 }
 
 .vehicle-badge {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 12px; /* Reduzido de 15px */
+  left: 12px; /* Reduzido de 15px */
   background: var(--gradient-primary);
   color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  padding: 4px 10px; /* Reduzido de 6px 12px */
+  border-radius: 15px; /* Reduzido de 20px */
+  font-size: 0.7rem; /* Reduzido de 0.8rem */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .vehicle-info {
-  padding: 1.5rem;
+  padding: 1.2rem; /* Reduzido de 1.5rem */
 }
 
 .vehicle-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem; /* Reduzido de 1.4rem */
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem; /* Reduzido de 0.5rem */
   color: var(--text-primary);
 }
 
 .vehicle-details {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+  gap: 0.8rem; /* Reduzido de 1rem */
+  margin-bottom: 0.8rem; /* Reduzido de 1rem */
+  font-size: 0.8rem; /* Reduzido de 0.9rem */
   color: var(--text-secondary);
 }
 
 .vehicle-detail-item {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.25rem; /* Reduzido de 0.3rem */
 }
 
 .vehicle-price {
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* Reduzido de 1.8rem */
   font-weight: 800;
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem; /* Reduzido de 1rem */
 }
 
 .btn-modern {
   background: var(--gradient-primary);
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 50px;
+  padding: 10px 20px; /* Reduzido de 12px 24px */
+  border-radius: 40px; /* Reduzido de 50px */
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem; /* Reduzido de 0.5rem */
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  font-size: 0.9rem; /* Adicionado */
 }
 
 .btn-modern::before {
@@ -349,13 +346,13 @@ body {
 }
 
 .btn-modern:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px); /* Reduzido de -2px */
   box-shadow: var(--shadow-medium);
   color: white;
   text-decoration: none;
 }
 
-/* Header Moderno */
+/* Header Moderno - COMPACTO */
 .modern-header {
   background: rgba(15, 15, 15, 0.95);
   backdrop-filter: blur(20px);
@@ -366,11 +363,12 @@ body {
   right: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  padding: 0.5rem 0; /* Adicionado padding menor */
 }
 
 .navbar-brand {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Reduzido de 1.5rem */
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -383,12 +381,14 @@ body {
   color: #ffffff;
   position: relative;
   transition: color 0.3s ease;
+  font-size: 0.9rem; /* Adicionado */
+  padding: 0.5rem 0.8rem; /* Reduzido */
 }
 
 .navbar-nav .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -3px; /* Reduzido de -5px */
   left: 50%;
   width: 0;
   height: 2px;
@@ -405,11 +405,11 @@ body {
   width: 100%;
 }
 
-/* Footer Moderno */
+/* Footer Moderno - COMPACTO */
 .modern-footer {
   background: var(--background-dark);
   color: white;
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 1.5rem; /* Reduzido de 3rem 0 2rem */
   position: relative;
   overflow: hidden;
 }
@@ -424,29 +424,19 @@ body {
   background: var(--gradient-primary);
 }
 
-/* Página de Detalhes */
+/* Página de Detalhes - COMPACTA */
 .detail-hero {
   background: var(--gradient-hero);
-  padding: 140px 0 60px;
+  padding: 120px 0 60px; /* Aumentado de 100px 0 40px */
   color: white;
   position: relative;
 }
 
-.detail-hero::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(180deg, transparent 0%, var(--background-white) 100%);
-}
-
 .detail-image {
-  border-radius: 20px;
+  border-radius: 15px; /* Reduzido de 20px */
   overflow: hidden;
   box-shadow: var(--shadow-large);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduzido de 2rem */
 }
 
 .detail-image img {
@@ -457,48 +447,48 @@ body {
 
 .detail-info-card {
   background: var(--background-white);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 15px; /* Reduzido de 20px */
+  padding: 1.5rem; /* Reduzido de 2rem */
   box-shadow: var(--shadow-medium);
   border: 1px solid var(--border-color);
   position: sticky;
-  top: 100px;
+  top: 80px; /* Reduzido de 100px */
 }
 
 .spec-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 2rem 0;
+  gap: 0.8rem; /* Reduzido de 1rem */
+  margin: 1.5rem 0; /* Reduzido de 2rem 0 */
 }
 
 .spec-item {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 0.8rem;
+  gap: 0.6rem; /* Reduzido de 0.8rem */
+  padding: 0.6rem; /* Reduzido de 0.8rem */
   background: var(--background-light);
-  border-radius: 12px;
+  border-radius: 10px; /* Reduzido de 12px */
   transition: transform 0.2s ease;
 }
 
 .spec-item:hover {
-  transform: translateX(4px);
+  transform: translateX(3px); /* Reduzido de 4px */
 }
 
 .spec-icon {
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzido de 1.2rem */
 }
 
 .whatsapp-btn {
   background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   color: white;
   border: none;
-  padding: 16px 32px;
-  border-radius: 50px;
+  padding: 12px 24px; /* Reduzido de 16px 32px */
+  border-radius: 40px; /* Reduzido de 50px */
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Reduzido de 1.1rem */
   width: 100%;
   transition: all 0.3s ease;
   position: relative;
@@ -506,32 +496,40 @@ body {
 }
 
 .whatsapp-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px); /* Reduzido de -2px */
   box-shadow: var(--shadow-large);
   color: white;
 }
 
-/* Responsividade */
+/* Responsividade - AJUSTADA */
 @media (max-width: 768px) {
+  html {
+    font-size: 13px; /* Ainda menor em mobile */
+  }
+  
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduzido de 2.5rem */
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduzido de 1.2rem */
   }
   
   .hero-stats {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduzido de 2rem */
+  }
+  
+  .hero-section {
+    padding: 85px 0 55px; /* Aumentado de 70px 0 40px */
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 1.6rem; /* Reduzido de 2rem */
   }
   
   .vehicle-card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; /* Reduzido de 1.5rem */
   }
   
   .spec-grid {
@@ -540,42 +538,46 @@ body {
   
   .detail-info-card {
     position: static;
-    margin-top: 2rem;
+    margin-top: 1.5rem; /* Reduzido de 2rem */
   }
 }
 
 @media (max-width: 576px) {
+  html {
+    font-size: 12px; /* Ainda menor em telas pequenas */
+  }
+  
   .hero-section {
-    padding: 100px 0 60px;
+    padding: 75px 0 45px; /* Aumentado de 60px 0 30px */
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Reduzido de 2rem */
   }
   
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduzido de 1rem */
   }
   
   .vehicles-section {
-    padding: 60px 0;
+    padding: 40px 0; /* Reduzido de 60px 0 */
   }
   
   .vehicle-info {
-    padding: 1rem;
+    padding: 1rem; /* Reduzido */
   }
   
   .vehicle-details {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem; /* Reduzido de 0.5rem */
   }
 }
 
 /* Animações de scroll */
 .scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
   transition: all 0.6s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scroll-animate.animate {
@@ -597,4 +599,18 @@ body {
   100% {
     background-position: 200% 0;
   }
+}
+
+.modern-header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.modern-header .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.loading-vehicles > .col,
+.loading-vehicles > * > .col {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
 }

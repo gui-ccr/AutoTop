@@ -17,6 +17,7 @@ import {
 
 function StockPage() {
   const [filteredVehicles, setFilteredVehicles] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
     brand: '',
@@ -31,6 +32,8 @@ function StockPage() {
   const [sortBy, setSortBy] = useState('featured');
   const [viewMode, setViewMode] = useState('grid');
   const [showFilterSidebar, setShowFilterSidebar] = useState(false);
+
+  
 
   // Aplicar filtros
   const applyFilters = useMemo(() => {
@@ -94,8 +97,17 @@ function StockPage() {
   }, [searchTerm, filters, sortBy]);
 
   useEffect(() => {
-    setFilteredVehicles(applyFilters);
-  }, [applyFilters]);
+  setIsLoading(true); // 1. Ativa o modo "carregando"
+
+  // 2. Usamos um setTimeout para simular uma busca e dar tempo para a animação ser vista
+  const timer = setTimeout(() => {
+    setFilteredVehicles(applyFilters); // Atualiza a lista de veículos
+    setIsLoading(false); // Desativa o modo "carregando"
+  }, 300); // 300 milissegundos
+
+  // Função de limpeza para evitar bugs
+  return () => clearTimeout(timer);
+}, [applyFilters]);
 
   useEffect(() => {
     const observeElements = () => {
@@ -189,14 +201,12 @@ function StockPage() {
         background: '#ffffff', 
         padding: '1.5rem 0',
         borderBottom: '1px solid #e5e5e5',
-        position: 'sticky',
         top: '80px',
         zIndex: 100,
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
       }}>
         <Container>
-          <Row className="align-items-center">
-            <Col lg={5} md={6} className="mb-2 mb-md-0">
+        <Row className={`g-4 ${viewMode === 'list' ? 'flex-column' : ''} ${isLoading ? 'loading-vehicles' : ''}`}><Col lg={5} md={6} className="mb-2 mb-md-0">
               <div style={{ position: 'relative' }}>
                 <Form.Control
                   type="search"

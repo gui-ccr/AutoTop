@@ -109,6 +109,8 @@ function Header() {
               Sobre Nós
             </Nav.Link>
             <Nav.Link 
+              as={Link}
+              to="/contato"
               href="#contato"
               style={{
                 fontWeight: '500',

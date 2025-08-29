@@ -1,10 +1,10 @@
 // src/components/VehicleCard.jsx - Card Corrigido
 import { Button, Badge, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { 
-  FaCalendarAlt, 
-  FaTachometerAlt, 
-  FaEye, 
+import {
+  FaCalendarAlt,
+  FaTachometerAlt,
+  FaEye,
   FaArrowRight,
   FaGasPump,
   FaCog,
@@ -24,16 +24,16 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
         transition: 'all 0.3s ease',
         marginBottom: '1rem'
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-2px)';
-        e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
-        e.currentTarget.style.borderColor = '#dc2626';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
-        e.currentTarget.style.borderColor = '#e5e5e5';
-      }}>
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
+          e.currentTarget.style.borderColor = '#dc2626';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+          e.currentTarget.style.borderColor = '#e5e5e5';
+        }}>
         <Row className="align-items-center">
           {/* Imagem */}
           <Col md={3}>
@@ -44,8 +44,8 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
               height: '140px',
               background: '#f9fafb'
             }}>
-              <img 
-                src={vehicle.image} 
+              <img
+                src={vehicle.images[0]}
                 alt={vehicle.name}
                 style={{
                   width: '100%',
@@ -55,7 +55,7 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
                 }}
               />
               {vehicle.featured && (
-                <Badge 
+                <Badge
                   style={{
                     position: 'absolute',
                     top: '10px',
@@ -208,19 +208,23 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
   return (
     <div className="vehicle-card">
       <div className="vehicle-image-container">
-        <img src={vehicle.image} alt={vehicle.name} />
-        
+        <img src={vehicle.images[0]} alt={vehicle.name} />
+
         {/* Badges */}
-        <div style={{ position: 'absolute', top: '15px', left: '15px' }}>
-          <div className="vehicle-badge" style={{ marginRight: '0.5rem' }}>
+        <div style={{ position: 'absolute', top: '1px', left: '15px' }}>
+          <div className="vehicle-badge">
             {vehicle.condition || 'Seminovo'}
           </div>
-          {vehicle.featured && (
-            <Badge 
+        </div>
+
+        {/* O Badge de Destaque agora tem seu próprio contêiner posicionado à direita */}
+        {vehicle.featured && (
+          <div style={{ position: 'absolute', top: '20px', right: '15px' }}>
+            <Badge
               style={{
                 background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)',
                 color: '#dc2626',
-                padding: '6px 12px',
+                padding: '8px 12px',
                 borderRadius: '20px',
                 fontSize: '0.8rem',
                 fontWeight: '600',
@@ -230,11 +234,11 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
             >
               Destaque
             </Badge>
-          )}
-        </div>
-        
+          </div>
+        )}
+
         {/* Overlay com botão de ação */}
-        <div 
+        <div
           className="card-overlay"
           style={{
             position: 'absolute',
@@ -272,7 +276,7 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
           </Button>
         </div>
       </div>
-      
+
       <div className="vehicle-info">
         <div className="d-flex justify-content-between align-items-start mb-2">
           <h3 className="vehicle-title">{vehicle.name}</h3>
@@ -280,7 +284,7 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
             {vehicle.category}
           </Badge>
         </div>
-        
+
         <p style={{
           color: '#404040',
           fontSize: '0.9rem',
@@ -288,7 +292,7 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
         }}>
           {vehicle.brand} {vehicle.model}
         </p>
-        
+
         {/* Grade de especificações */}
         <div className="vehicle-details" style={{ marginBottom: '1rem' }}>
           <div className="vehicle-detail-item">
@@ -329,15 +333,15 @@ function VehicleCard({ vehicle, viewMode = 'grid' }) {
           <FaPalette style={{ color: '#dc2626' }} />
           <span>{vehicle.color}</span>
         </div>
-        
+
         <div className="vehicle-price">R$ {vehicle.price}</div>
-        
+
         <Button
           as={Link}
           to={`/veiculo/${vehicle.id}`}
           className="btn-modern"
-          style={{ 
-            width: '100%', 
+          style={{
+            width: '100%',
             justifyContent: 'center',
             textDecoration: 'none'
           }}

@@ -95,6 +95,8 @@ function Header() {
               Estoque
             </Nav.Link>
             <Nav.Link 
+              as={Link}
+              to="/sobre"
               href="#sobre"
               style={{
                 fontWeight: '500',

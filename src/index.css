@@ -31,9 +31,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+main {
+  padding-top: 100px; 
+}
 html {
   scroll-behavior: smooth;
+}
+
+
+/* src/index.css */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 body {

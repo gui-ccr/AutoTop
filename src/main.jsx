@@ -1,7 +1,7 @@
 // src/main.jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 // import de paginas
 import App from './App.jsx'
@@ -11,12 +11,11 @@ import StockPage from './pages/StockPage.jsx';
 import AboutPage from './pages/AboutPage.jsx'; 
 import ContatcPage from './pages/ContactPage.jsx'; 
 
-
 // import de estilização
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -38,7 +37,7 @@ const router = createBrowserRouter([
         element: <ContatcPage />,
       },
       {
-        path: "/veiculo/:id", // Rota dinâmica! O :id é uma variável.
+        path: "/veiculo/:id",
         element: <VehicleDetailPage />,
       },
     ]

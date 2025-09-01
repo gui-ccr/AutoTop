@@ -160,6 +160,15 @@ function VehicleDetailPage() {
                 </div>
               </div>
             </Col>
+             {/* NOVA SEÇÃO DE DESCRIÇÃO */}
+  <div className="scroll-animate" style={{ marginTop: '3rem' }}>
+    <h3 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '1.5rem', color: '#2c3e50' }}>
+      Descrição do Veículo
+    </h3>
+    <p style={{ color: '#5d6c7b', lineHeight: '1.8', whiteSpace: 'pre-wrap' }}>
+      {vehicle.description}
+    </p>
+  </div>
           </Row>
         </Container>
       </section>

@@ -81,7 +81,7 @@ function HomePage() {
               </span>
             </h1>
             <p className="hero-subtitle">
-              Seminovos selecionados, garantia total e as melhores condições de pagamento
+              Seminovos  e novos selecionados, garantia total e as melhores condições de pagamento
             </p>
 
             <div className="hero-stats">

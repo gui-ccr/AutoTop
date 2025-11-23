@@ -1,4 +1,4 @@
-import { LayoutDashboardIcon, WarehouseIcon, Wallet2Icon, UserStarIcon, BanknoteArrowUpIcon } from "lucide-react";
+import { LayoutDashboardIcon, WarehouseIcon, Wallet2Icon, UserStarIcon, BanknoteArrowUpIcon, UserIcon } from "lucide-react";
 import { useState } from "react";
 import { Dashboard } from "../../pages/Dashboard";
 
@@ -7,10 +7,11 @@ export function SidebarEfeito() {
 
   const menus = [
     { name: "Dashboard", icon: LayoutDashboardIcon },
+    { name: "Clientes", icon: UserStarIcon },
     { name: "Estoque", icon: WarehouseIcon },
     { name: "Vendas", icon: Wallet2Icon },
     { name: "Faturamento", icon: BanknoteArrowUpIcon },
-    { name: "Clientes", icon: UserStarIcon },
+    { name: "Contas", icon: UserIcon},
   ];
 
   // DEFINA AS CORES AQUI PARA NÃO ERRAR

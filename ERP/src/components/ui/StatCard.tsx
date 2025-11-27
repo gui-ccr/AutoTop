@@ -12,16 +12,16 @@ interface StatCardProps {
 export function StatCard({label, value, icon: Icon, trend, trendPositive} : StatCardProps ) {
     
     return(
-        <div className='bg-zinc-100 rounded-xl p-6 border border-zinc-300 shadow-sm flex items-start justify-between hover:shadow-lg transition-shadow'>
+        <div className='bg-zinc-800 rounded-xl p-6 border border-zinc-700 shadow-sm flex items-start justify-between hover:shadow-lg hover:border-red-500/50 transition-all'>
             <div>
-                <p className='text-sm font-medium text-zinc-500 mb-1.5'>{label}</p>
-                <h3 className='text-2xl font-bold text-zinc-900'>{value}</h3>
+                <p className='text-sm font-medium text-zinc-400 mb-1.5'>{label}</p>
+                <h3 className='text-2xl font-bold text-white'>{value}</h3>
 
                 {trend && (
-                    <p className={`text-xs mt-2 font-medium ${trendPositive ? 'text-emerald-600': 'text-red-600'}`}>{trend}</p>
+                    <p className={`text-xs mt-2 font-medium ${trendPositive ? 'text-emerald-400': 'text-red-400'}`}>{trend}</p>
                 )}
             </div>
-            <div>
+            <div className='text-red-500'>
             <Icon size={24}/>
             </div>
         </div>

@@ -3,11 +3,9 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import { Dashboard } from "./pages/Dashboard";
 import { Clientes } from "./pages/Clientes";
+import { Estoque } from "./pages/Estoque";
 
 // Crie placeholders para as outras páginas para não dar erro
-const Estoque = () => (
-  <h1 className="p-8 text-2xl text-white">Página de Estoque (Em breve)</h1>
-);
 const Vendas = () => (
   <h1 className="p-8 text-2xl text-white">Página de Vendas (Em breve)</h1>
 );

@@ -4,11 +4,9 @@ import { AppLayout } from "./components/layout/AppLayout";
 import { Dashboard } from "./pages/Dashboard";
 import { Clientes } from "./pages/Clientes";
 import { Estoque } from "./pages/Estoque";
+import { Vendas } from "./pages/Vendas";
 
 // Crie placeholders para as outras páginas para não dar erro
-const Vendas = () => (
-  <h1 className="p-8 text-2xl text-white">Página de Vendas (Em breve)</h1>
-);
 const Faturamento = () => (
   <h1 className="p-8 text-2xl text-white">Página de Faturamento (Em breve)</h1>
 );

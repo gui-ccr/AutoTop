@@ -6,6 +6,7 @@ import { Clientes } from "./pages/Clientes";
 import { Estoque } from "./pages/Estoque";
 import { Vendas } from "./pages/Vendas";
 import { Faturamento } from "./pages/Faturamento";
+import { Contas } from "./pages/Contas";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="vendas" element={<Vendas />} />
           <Route path="faturamento" element={<Faturamento />} />
           <Route path="clientes" element={<Clientes />} />
+          <Route path="contas" element={<Contas />} />
         </Route>
 
         {/* Futuramente: Rota de Login (fora do layout) */}
